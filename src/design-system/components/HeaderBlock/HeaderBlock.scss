@@ -1,0 +1,8 @@
+@use "../../styles/variables" as *;
+
+.header-block {
+  padding: $spacing-2;
+  background-color: $color-primary;
+  color: #fff;
+  border-radius: $border-radius-base;
+}
