@@ -1,0 +1,27 @@
+@use "../../../design-system/styles/variables" as *;
+
+.template-builder {
+  display: flex;
+  min-height: 100vh;
+
+  &__sidebar {
+    width: 320px;
+    padding: $spacing-3;
+    border-right: 1px solid rgba($color-secondary, 0.15);
+    background-color: #fff;
+  }
+
+  &__preview {
+    flex: 1;
+    padding: $spacing-3;
+    background-color: #f7fafc;
+  }
+
+  &__preview-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: $border-radius-base;
+    padding: $spacing-2;
+  }
+}
