@@ -1,0 +1,7 @@
+@use "../../styles/variables" as *;
+
+.image-block {
+  display: block;
+  max-width: 100%;
+  border-radius: $border-radius-base;
+}
