@@ -1,0 +1,9 @@
+@use "../../styles/variables" as *;
+
+.text-block {
+  font-family: $font-family-base;
+  color: $color-secondary;
+  padding: $spacing-2;
+  margin: 0;
+  line-height: 1.5;
+}
