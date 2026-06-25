@@ -12,9 +12,13 @@ export function PreviewPanel() {
 
   if (blocks.length === 0) {
     return (
-      <p className="preview-panel__empty">
-        Add blocks from the sidebar to start building your template
-      </p>
+      <div className="preview-panel__empty">
+        <div className="preview-panel__empty-icon" aria-hidden="true">+</div>
+        <p className="preview-panel__empty-title">Your email is empty</p>
+        <p className="preview-panel__empty-text">
+          Add blocks from the sidebar to start building your template
+        </p>
+      </div>
     );
   }
 
@@ -28,9 +32,13 @@ export function PreviewPanel() {
           }`}
           onClick={() => selectBlock(block.id)}
         >
-          {renderBlock(block)}
+          <div className="preview-panel__block-content">
+            {renderBlock(block)}
+          </div>
           <button
             type="button"
+            className="preview-panel__remove"
+            aria-label="Remove block"
             onClick={(e) => {
               e.stopPropagation();
               removeBlock(block.id);

@@ -24,8 +24,7 @@ describe("TemplateBuilder", () => {
   it("updates the preview when a header title is edited", () => {
     renderBuilder();
 
-    const addButtons = screen.getAllByRole("button", { name: "Add" });
-    fireEvent.click(addButtons[0]);
+    fireEvent.click(screen.getByRole("button", { name: "Add Header block" }));
 
     expect(
       screen.getByRole("heading", { name: "Your headline here" }),

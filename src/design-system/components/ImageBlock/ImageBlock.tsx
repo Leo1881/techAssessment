@@ -12,5 +12,9 @@ export const ImageBlock = memo(function ImageBlock({
   alt,
   width = "100%",
 }: ImageBlockProps) {
-  return <img className="image-block" src={src} alt={alt} style={{ width }} />;
+  return (
+    <div className="image-block-wrapper">
+      <img className="image-block" src={src} alt={alt} style={{ width }} />
+    </div>
+  );
 });

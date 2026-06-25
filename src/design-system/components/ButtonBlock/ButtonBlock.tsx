@@ -15,8 +15,10 @@ export const ButtonBlock = memo(function ButtonBlock({
   variant = "primary",
 }: ButtonBlockProps) {
   return (
-    <a href={url} className={`button-block button-block--${variant}`}>
-      {label}
-    </a>
+    <div className="button-block-wrapper">
+      <a href={url} className={`button-block button-block--${variant}`}>
+        {label}
+      </a>
+    </div>
   );
 });

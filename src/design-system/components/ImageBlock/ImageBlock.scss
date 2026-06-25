@@ -1,7 +1,14 @@
 @use "../../styles/variables" as *;
 
+.image-block-wrapper {
+  padding: $spacing-2 $spacing-3;
+  text-align: center;
+}
+
 .image-block {
   display: block;
   max-width: 100%;
+  height: auto;
   border-radius: $border-radius-base;
+  margin: 0 auto;
 }
