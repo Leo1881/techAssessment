@@ -8,7 +8,7 @@ import type { TemplateBlock } from "../types";
 import { useTemplate } from "../TemplateContext";
 
 export function PreviewPanel() {
-  const { blocks, removeBlock, selectBlock } = useTemplate();
+  const { blocks, selectedBlockId, removeBlock, selectBlock } = useTemplate();
 
   if (blocks.length === 0) {
     return (
@@ -23,7 +23,9 @@ export function PreviewPanel() {
       {blocks.map((block) => (
         <div
           key={block.id}
-          className="preview-panel__block"
+          className={`preview-panel__block${
+            block.id === selectedBlockId ? " preview-panel__block--selected" : ""
+          }`}
           onClick={() => selectBlock(block.id)}
         >
           {renderBlock(block)}

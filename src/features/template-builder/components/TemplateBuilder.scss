@@ -25,3 +25,15 @@
     padding: $spacing-2;
   }
 }
+
+.preview-panel__block {
+  position: relative;
+  margin-bottom: $spacing-2;
+  border: 2px solid transparent;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+
+  &--selected {
+    border-color: $color-primary;
+  }
+}
